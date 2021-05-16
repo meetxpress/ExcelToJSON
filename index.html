@@ -8,10 +8,7 @@
     <title>Excel to JSON Convertor</title>
     <link rel="stylesheet" href="https://bit.ly/boot5_css">
     <link rel="stylesheet" href="style.css">
-
-    <script src="main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.full.min.js"></script>
 
 <body>
     <div class="container">
@@ -19,13 +16,16 @@
             <center>Excel to JSON Convertor</center>
         </h1>
         <div>
-            <label for="conFile">Upload Excel File here: </label>
-            <input type="file" name="conFile" id="fileUploader" class="form-control" accept=".xls, .xlsx" />
-            <center><button class="btn btn-primary form-control w-50 mt-3" onclick="voidConvo()">Convert</button>
+            <label for="fileUpload">Upload Excel File here: </label>
+            <input type="file" id="fileUpload" class="form-control" accept=".xls, .xlsx" />
+            <center>
+                <button id="uploadExcel" class="btn btn-primary form-control w-50 mt-3">Convert</button>
             </center>
-        </div>
-        <div id="result"></div>
+        </div><br>
+        
+        <div id="jsonResult"></div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
